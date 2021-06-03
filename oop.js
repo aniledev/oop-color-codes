@@ -100,7 +100,7 @@ class ColorClass {
 }
 
 const c1 = new ColorClass(255, 67, 89, "tomato");
-console.log(c1);
-console.log(c1.rgb());
-console.log(c1.rgba());
-console.log("hex", c1.hex());
+// console.log(c1);
+// console.log(c1.rgb());
+// console.log(c1.rgba());
+// console.log("hex", c1.hex());
