@@ -34,6 +34,13 @@ const firstColor = makeColor(35, 255, 150);
 // console.log(firstColor.rgb());
 // console.log(firstColor.hex());
 
+/* 
+// THE NEW KEYWORD
+// 1. Creates a blank, JS object
+// 2. Links (sets the constructor of) this object to another object;
+// 3. Passes the newly created object from Step 1 as the this context
+// 4. Returns this if the function doesn't return its own object
+*/
 function Color(r, g, b) {
   this.r = r;
   this.g = g;
