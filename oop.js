@@ -70,3 +70,36 @@ console.log(colorOne.rgba());
 console.log(colorOne.hex === colorTwo.hex);
 /* the above should return true because the hex method is attached to the Color 
 prototype and not to each individual instance */
+
+class ColorClass {
+  constructor(r, g, b, name) {
+    // console.log("INSIDE CONSTRUCTOR!");
+    //   console.log(r, g, b);
+    this.r = r;
+    this.g = g;
+    this.b = b;
+    this.name = name;
+  }
+  shortRGB() {
+    const { r, g, b } = this;
+    return `${r}, ${g}, ${b}`;
+  }
+  rgb() {
+    const { r, g, b } = this;
+    return `rgb(${this.shortRGB()})`;
+  }
+  rgba(a = 1.0) {
+    const { r, g, b } = this;
+    return `rgba(${this.shortRGB()}, ${a})`;
+  }
+  hex() {
+    const { r, g, b } = this;
+    return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
+  }
+}
+
+const c1 = new ColorClass(255, 67, 89, "tomato");
+console.log(c1);
+console.log(c1.rgb());
+console.log(c1.rgba());
+console.log("hex", c1.hex());
