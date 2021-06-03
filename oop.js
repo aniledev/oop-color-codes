@@ -164,5 +164,5 @@ const white = new ColorClass(255, 255, 255, "white");
 // console.log(c1);
 // console.log(c1.rgb());
 // console.log(c1.rgba());
-// console.log("hex", c1.hex());
-console.log(white.opposite());
+// // console.log("hex", c1.hex());
+// console.log(white.opposite());
