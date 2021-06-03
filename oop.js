@@ -71,6 +71,7 @@ console.log(colorOne.hex === colorTwo.hex);
 /* the above should return true because the hex method is attached to the Color 
 prototype and not to each individual instance */
 
+// the above can be implemented with the class and new keywords
 class ColorClass {
   constructor(r, g, b, name) {
     // console.log("INSIDE CONSTRUCTOR!");
