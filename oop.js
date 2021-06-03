@@ -13,6 +13,7 @@ const testColorRgb = rgb(255, 100, 25);
 console.log(testColorRgb);
 console.log(testColorHex);
 
+// create a factory function with properties and methods for an object
 const makeColor = (r, g, b) => {
   const color = {};
   color.r = r;
