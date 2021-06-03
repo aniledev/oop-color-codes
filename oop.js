@@ -50,10 +50,16 @@ Color.prototype.hex = function () {
   return "#" + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
 };
 
+Color.prototype.rgba = function (a = 1.0) {
+  const { r, g, b } = this;
+  return `rgba(${r}, ${g}, ${b}, ${a})`;
+};
+
 const colorOne = new Color(40, 50, 60);
 const colorTwo = new Color(120, 37, 59);
 console.log(colorOne.rgb());
 console.log(colorOne.hex());
+console.log(colorOne.rgba());
 console.log(colorOne.hex === colorTwo.hex);
 /* the above should return true because the hex method is attached to the Color 
 prototype and not to each individual instance */
