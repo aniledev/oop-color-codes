@@ -104,8 +104,9 @@ class ColorClass {
 
   hsl() {
     const { h, s, l } = this;
-    return `hsl(${h}, ${s}%, ${l})%`;
+    return `hsl(${h}, ${s}%, ${l}%)`;
   }
+
   calcHSL() {
     let { r, g, b } = this;
     r /= 255;
@@ -145,6 +146,17 @@ class ColorClass {
     this.s = s;
     this.l = l;
   }
+
+  opposite() {
+    const { h, s, l } = this;
+    const newHue = (h + 180) % 360;
+    return `hsl(${newHue}, ${s}%, ${l}%)`;
+  }
+
+  fullySaturated() {
+    const { h, l } = this;
+    return `hsl(${h}, 100%, ${l}%)`;
+  }
 }
 
 const c1 = new ColorClass(255, 67, 89, "tomato");
@@ -153,4 +165,4 @@ const white = new ColorClass(255, 255, 255, "white");
 // console.log(c1.rgb());
 // console.log(c1.rgba());
 // console.log("hex", c1.hex());
-console.log(white.hsl());
+console.log(white.opposite());
